@@ -15,7 +15,7 @@ import java.io.*;
  */
 
 public abstract class NetworkServer {
-    private int port;
+
 
     /** Build a server on specified port. It will continue to
      *  accept connections, passing each to handleConnection until
@@ -23,6 +23,7 @@ public abstract class NetworkServer {
      *  or System.exit() from handleConnection or elsewhere
      *  in the Java code).
      */
+    private int port;
 
     public NetworkServer(int port) {
         this.port = port;
