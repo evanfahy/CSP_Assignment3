@@ -40,11 +40,16 @@ public abstract class NetworkClient {
      */
 
     public void connect() {
-        try(Socket client = new Socket(host, port)) {
-            handleConnection(client);
+        try(Socket clientSocket = new Socket(host, port)) {
+
+            handleConnection(clientSocket);
+
         } catch(UnknownHostException uhe) {
+
             System.err.println("Unknown host: " + host);
+
         } catch(IOException ioe) {
+
             System.err.println("IOException: " + ioe);
         }
     }
